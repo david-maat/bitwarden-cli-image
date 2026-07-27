@@ -43,7 +43,7 @@ jobs:
           push: true
           build-args:
             BW_VERSION=${{ steps.fetch-version.outputs.latest_version }}
-          tags:
+          tags: |
             ghcr.io/${{ github.repository_owner }}/bitwarden-cli:latest
             ghcr.io/${{ github.repository_owner }}/bitwarden-cli:${{ steps.fetch-version.outputs.latest_version }}
           cache-from: type=gha
