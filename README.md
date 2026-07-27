@@ -11,7 +11,6 @@ You can configure and authenticate the Bitwarden CLI inside the container using 
 *   **`BW_CLIENTID`**: Your API Client ID (Used for API key authentication).
 *   **`BW_CLIENTSECRET`**: Your API Client Secret (Used for API key authentication).
 *   **`BW_PASSWORD`**: Your master password. Required to unlock the vault when using API key authentication so `bw serve` can access secrets.
-*   **`BW_SESSION`**: The active session token (if you have already authenticated and unlocked the vault elsewhere).
 
 ### Configuration
 
@@ -25,5 +24,5 @@ docker run -d \
   -e BW_CLIENTID="your_client_id" \
   -e BW_CLIENTSECRET="your_client_secret" \
   -e BW_PASSWORD="your_master_password" \
-  ghcr.io/david-maat/bitwarden-cli-image:latest
+  ghcr.io/david-maat/bitwarden-cli:latest
 ```
