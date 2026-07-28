@@ -2,6 +2,8 @@ FROM node:22-alpine
 
 ARG BW_VERSION
 
+RUN apk add --no-cache jq
+
 RUN npm install -g @bitwarden/cli@${BW_VERSION}
 
 RUN adduser -D -u 1001 bitwarden
